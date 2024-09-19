@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './App.css';//main.css file which contains all the global css styles
+import LeftFixedBar from './components/LeftFixedBar/LeftFixedBar';
+import RightSectionsBar from './components/RightSectionsBar/RightSectionsBar';
 
-function App() {
+function App(){
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container-fluid">
+      <div>
+          <LeftFixedBar></LeftFixedBar>
+          <RightSectionsBar></RightSectionsBar>
+      </div>
     </div>
-  );
+  )
 }
 
 export default App;

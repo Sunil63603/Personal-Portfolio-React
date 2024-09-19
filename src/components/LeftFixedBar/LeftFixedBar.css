@@ -1,0 +1,108 @@
+/*--------------------------------------------------------------
+# Left side bar(navigation bar)
+--------------------------------------------------------------*/
+
+/*code related to left side bar/navigation bar*/
+.header {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: 0 45px;
+  width: 420px;
+  transition: all ease-in-out 0.3s;
+  overflow-y: auto;
+  z-index: 997;
+  border-right: 1px solid
+    color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+/* This is code related to image displayed in left side bar */
+.header .profile-img img {
+  margin: 25px auto;
+  display: block;
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  object-position: center;
+  border: 8px solid color-mix(in srgb, var(--default-color), transparent 85%);
+}
+
+/* code which is used to display 'Sunil' in left side bar(its actually considered as logo)*/
+.header .logo {
+  text-decoration: none;
+  line-height: 1;
+  margin-bottom: 15px;
+}
+
+.header .logo img {
+  max-height: 32px;
+  margin-right: 8px;
+}
+
+.header .logo h1 {
+  font-size: 40px;
+  margin: 0;
+  font-weight: 700;
+  color: var(--heading-color);
+}
+/* end of code related to name/logo in left side bar*/
+
+
+/* display left side bar if min-width is 1200px */
+@media (min-width: 1200px) {
+  .header ~ main,
+  .header ~ #footer {
+    margin-left: 300px;
+  }
+}
+
+/* display left side bar if max-width is 1199px */
+@media (max-width: 1199px) {
+  /* to hide left side bar towards left */
+  .header {
+    left: -100%;
+  }
+}
+
+.header .header-show {
+  left: 0;
+}
+
+/* ❌implement this functionality(leftFixedBar will appear when clicked on toggle button) */
+/* below code,'header-toggle' is used to hide/show left side bar using a button/icon at top right(this is only for mobile view) */
+.header .header-toggle {
+  color: var(--contrast-color);
+  background-color: var(--accent-color);
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 9999;
+  /* is this highest z-index of this website?*/
+  transition: background-color 0.3s;
+}
+
+/* header-toggle is button used to change button's visibility */
+.header .header-toggle:hover {
+  color: var(--contrast-color);
+  background-color: color-mix(in srgb, var(--accent-color) 90%, white 15%);
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+
+/* ❌find where mobile-nav-toggle is used in index.html❌*/
+.mobile-nav-toggle {
+  display: none;
+}

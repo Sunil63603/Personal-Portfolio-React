@@ -1,0 +1,214 @@
+
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+
+/* chatGPT code 👇 to animate waving hand */
+.wave-container {
+  font-size: 60px;
+  display: flex;
+}
+
+.wave {
+  margin-left: 40px;
+  font-size: 4rem;
+  display: inline-block;
+  animation: wave 1.5s infinite;
+  transform-origin: 100% 100%;
+}
+
+/* Keyframes for waving animation */
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+/* end of chatGpt code for waving hand */
+
+/* chatGPT👇code for background image */
+/*
+.about
+{ 
+  background-image: url('../../../public/img/Sunil_black_logo.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+*/
+/* end of chatGPT code for background image */
+
+.about .content h2 {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.about .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about .content ul li {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.about .content ul strong {
+  margin-right: 10px;
+}
+
+.about .content ul i {
+  font-size: 16px;
+  margin-right: 5px;
+  color: var(--accent-color);
+  line-height: 0;
+}
+
+/* 👇code from tabnine to increase the size and make the icons(js and react icons) bold */
+.fab {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* 👇code from tabnine for 'see my work' button in about section */
+.btn-green {
+  padding: 15px 40px;
+  border: none;
+  outline: none;
+  color: black;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+.btn-green::after {
+  content: "";
+  z-index: -2;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #424141;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+.btn-green::before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #abe5ab,
+    #73f173,
+    #86e583,
+    #9be798,
+    #91e988,
+    #8cf372,
+    #67e16b,
+    #8beca1
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 600%;
+  z-index: -1;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  filter: blur(1px);
+  animation: glowing 10s linear infinite;
+  transform: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.btn-green:hover::before {
+  opacity: 0.9;
+}
+
+.btn-green:active::after {
+  background: transparent;
+}
+
+.btn-green:active {
+  color: #000;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .btn-green {
+    padding: 3px 3px;
+    font-size: 16px;
+  }
+}
+/* end of code from tabnine for 'see my work' button in about section */
+
+/* this below code ensures that whenever i want to navigate section,'scroll' happens smooth */
+/* Smooth scroll effect */
+a[href^="#"] {
+  text-decoration: none;
+  color: inherit;
+}
+
+a[href^="#"]:hover {
+  color: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* 👇tabnine code to display content and green button,side by side   */
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 120px;
+}
+
+.about-text {
+  margin-left: 70px;
+  line-height: 70px;
+  flex-basis: 70%;
+}
+
+.about-button {
+  flex-basis: 30%;
+  text-align: center;
+  margin-right: 100px;
+  transform: scale(1.3);
+}
+/* end of code related to about section */

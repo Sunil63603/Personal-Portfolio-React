@@ -1,0 +1,115 @@
+
+/*code which is related to navigation menu present in left side bar*/
+.navmenu {
+  padding: 0;
+  z-index: 9997;
+}
+
+.navmenu ul {
+  list-style: none;
+  padding: 0 0 25px 0;
+  margin: 0;
+}
+
+/* below code is for text(about,skills,resume,projects,contact) in navmenu */
+.navmenu a,
+.navmenu a:focus {
+  color: var(--nav-color);
+  padding: 24px 10px;
+  font-family: var(--nav-font);
+  font-size: 22px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.navmenu a:hover,
+.navmenu .active,
+.navmenu .active:focus {
+  color: var(--nav-hover-color);
+}
+
+/* below code is for icons present in navmenu */
+.navmenu a .navicon,
+.navmenu a:focus .navicon {
+  font-size: 25px;
+  margin-right: 10px;
+}
+
+.navmenu a:hover .navicon,
+.navmenu .active .navicon,
+.navmenu .active:focus .navicon {
+  color: var(--accent-color);
+}
+
+/* ❌handle contact button's color transitions*/
+/* code to highlight contact button with green background in left side bar(navmenu in specific) */
+.contact-button {
+  color:black;
+  position: relative;
+  padding: 5px;
+  list-style: none;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-button::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -20px;
+  right: -30px;
+  bottom: -2px;
+  background: linear-gradient(
+    45deg,
+    #17e24d,
+    #16e624,
+    #15f032,
+    #5ced23,
+    #1ef13d,
+    #1cef5f,
+    #21f44f,
+    #20ef2b
+  );
+  background-size: 100%;
+  filter: blur(1px);
+  z-index: -1;
+  border-radius: 20px;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  animation: glowing 20s linear infinite;
+}
+
+/*keyframes are used to define different transitions(glowing colors in contact button) at different situations */
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.contact-button:hover::before {
+  opacity: 1;
+}
+
+.contact-button a {
+  color: black !important;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  border-radius: 8px;
+  transition: color 0.3s ease-in-out;
+}
+
+.contact-button:hover a {
+  color: black;
+}
+/* end of code to highlight contact button in left side bar */
